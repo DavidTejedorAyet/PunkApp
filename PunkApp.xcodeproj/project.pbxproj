@@ -14,6 +14,23 @@
 		6347C492270EDF41001DA24E /* PunkAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347C491270EDF41001DA24E /* PunkAppTests.swift */; };
 		6347C49C270EDF41001DA24E /* PunkAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347C49B270EDF41001DA24E /* PunkAppUITests.swift */; };
 		6347C49E270EDF41001DA24E /* PunkAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347C49D270EDF41001DA24E /* PunkAppUITestsLaunchTests.swift */; };
+		6347C4B8270EEECE001DA24E /* MainSceneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347C4B7270EEECE001DA24E /* MainSceneViewModel.swift */; };
+		6347C4BA270EEEE2001DA24E /* MainSceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347C4B9270EEEE2001DA24E /* MainSceneView.swift */; };
+		6347C4BC270EEEFB001DA24E /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347C4BB270EEEFB001DA24E /* APIService.swift */; };
+		6347C4BE270EF029001DA24E /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347C4BD270EF029001DA24E /* RequestBuilder.swift */; };
+		6347C4C0270EF05E001DA24E /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347C4BF270EF05E001DA24E /* APIError.swift */; };
+		6347C4C2270EF0BB001DA24E /* APISession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347C4C1270EF0BB001DA24E /* APISession.swift */; };
+		6347C4C5270EF221001DA24E /* BeerEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347C4C4270EF221001DA24E /* BeerEndpoint.swift */; };
+		6347C4C8270EF302001DA24E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347C4C7270EF302001DA24E /* Constants.swift */; };
+		6347C4CA270EF414001DA24E /* BeerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347C4C9270EF414001DA24E /* BeerService.swift */; };
+		6347C4CE270EF4FF001DA24E /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347C4CD270EF4FF001DA24E /* Beer.swift */; };
+		6347C4D0270EF791001DA24E /* BoilVolume.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347C4CF270EF791001DA24E /* BoilVolume.swift */; };
+		6347C4D2270EF7CA001DA24E /* Ingredients.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347C4D1270EF7CA001DA24E /* Ingredients.swift */; };
+		6347C4D4270EF806001DA24E /* Hop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347C4D3270EF806001DA24E /* Hop.swift */; };
+		6347C4D6270EF885001DA24E /* Malt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347C4D5270EF885001DA24E /* Malt.swift */; };
+		6347C4D8270EF8AC001DA24E /* ElavorationMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347C4D7270EF8AC001DA24E /* ElavorationMethod.swift */; };
+		6347C4DA270EF8CE001DA24E /* Fermentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347C4D9270EF8CE001DA24E /* Fermentation.swift */; };
+		6347C4DC270EF8DE001DA24E /* MashTemp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347C4DB270EF8DE001DA24E /* MashTemp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +61,23 @@
 		6347C497270EDF41001DA24E /* PunkAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PunkAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6347C49B270EDF41001DA24E /* PunkAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PunkAppUITests.swift; sourceTree = "<group>"; };
 		6347C49D270EDF41001DA24E /* PunkAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PunkAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		6347C4B7270EEECE001DA24E /* MainSceneViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSceneViewModel.swift; sourceTree = "<group>"; };
+		6347C4B9270EEEE2001DA24E /* MainSceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSceneView.swift; sourceTree = "<group>"; };
+		6347C4BB270EEEFB001DA24E /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		6347C4BD270EF029001DA24E /* RequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
+		6347C4BF270EF05E001DA24E /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		6347C4C1270EF0BB001DA24E /* APISession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APISession.swift; sourceTree = "<group>"; };
+		6347C4C4270EF221001DA24E /* BeerEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerEndpoint.swift; sourceTree = "<group>"; };
+		6347C4C7270EF302001DA24E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		6347C4C9270EF414001DA24E /* BeerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerService.swift; sourceTree = "<group>"; };
+		6347C4CD270EF4FF001DA24E /* Beer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
+		6347C4CF270EF791001DA24E /* BoilVolume.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoilVolume.swift; sourceTree = "<group>"; };
+		6347C4D1270EF7CA001DA24E /* Ingredients.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredients.swift; sourceTree = "<group>"; };
+		6347C4D3270EF806001DA24E /* Hop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hop.swift; sourceTree = "<group>"; };
+		6347C4D5270EF885001DA24E /* Malt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Malt.swift; sourceTree = "<group>"; };
+		6347C4D7270EF8AC001DA24E /* ElavorationMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElavorationMethod.swift; sourceTree = "<group>"; };
+		6347C4D9270EF8CE001DA24E /* Fermentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fermentation.swift; sourceTree = "<group>"; };
+		6347C4DB270EF8DE001DA24E /* MashTemp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MashTemp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +130,12 @@
 			children = (
 				6347C480270EDF3F001DA24E /* PunkAppApp.swift */,
 				6347C482270EDF3F001DA24E /* ContentView.swift */,
+				6347C4AF270EE2B6001DA24E /* Extensions */,
+				6347C4AE270EE2AD001DA24E /* Utils */,
+				6347C4AD270EE2A6001DA24E /* Data */,
+				6347C4AC270EE297001DA24E /* Custom Views */,
+				6347C4AB270EE1A5001DA24E /* Scenes */,
+				6347C4AA270EE19D001DA24E /* Resources */,
 				6347C484270EDF41001DA24E /* Assets.xcassets */,
 				6347C486270EDF41001DA24E /* Preview Content */,
 			);
@@ -125,6 +165,137 @@
 				6347C49D270EDF41001DA24E /* PunkAppUITestsLaunchTests.swift */,
 			);
 			path = PunkAppUITests;
+			sourceTree = "<group>";
+		};
+		6347C4AA270EE19D001DA24E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		6347C4AB270EE1A5001DA24E /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				6347C4B5270EEE4A001DA24E /* Main Scene */,
+				6347C4B1270EE81A001DA24E /* Beer Detail */,
+				6347C4B6270EEE96001DA24E /* Random Beer */,
+				6347C4B0270EE7FC001DA24E /* Beer List */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		6347C4AC270EE297001DA24E /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				6347C4B2270EE824001DA24E /* List Cells */,
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		6347C4AD270EE2A6001DA24E /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				6347C4B4270EED6E001DA24E /* API */,
+				6347C4B3270EED51001DA24E /* Models */,
+				6347C4CC270EF4E5001DA24E /* Responses */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		6347C4AE270EE2AD001DA24E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				6347C4C7270EF302001DA24E /* Constants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		6347C4AF270EE2B6001DA24E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		6347C4B0270EE7FC001DA24E /* Beer List */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Beer List";
+			sourceTree = "<group>";
+		};
+		6347C4B1270EE81A001DA24E /* Beer Detail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Beer Detail";
+			sourceTree = "<group>";
+		};
+		6347C4B2270EE824001DA24E /* List Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "List Cells";
+			sourceTree = "<group>";
+		};
+		6347C4B3270EED51001DA24E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6347C4CD270EF4FF001DA24E /* Beer.swift */,
+				6347C4CF270EF791001DA24E /* BoilVolume.swift */,
+				6347C4D1270EF7CA001DA24E /* Ingredients.swift */,
+				6347C4D3270EF806001DA24E /* Hop.swift */,
+				6347C4D5270EF885001DA24E /* Malt.swift */,
+				6347C4D7270EF8AC001DA24E /* ElavorationMethod.swift */,
+				6347C4D9270EF8CE001DA24E /* Fermentation.swift */,
+				6347C4DB270EF8DE001DA24E /* MashTemp.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6347C4B4270EED6E001DA24E /* API */ = {
+			isa = PBXGroup;
+			children = (
+				6347C4BB270EEEFB001DA24E /* APIService.swift */,
+				6347C4BD270EF029001DA24E /* RequestBuilder.swift */,
+				6347C4BF270EF05E001DA24E /* APIError.swift */,
+				6347C4C1270EF0BB001DA24E /* APISession.swift */,
+				6347C4C3270EF210001DA24E /* Repositories */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		6347C4B5270EEE4A001DA24E /* Main Scene */ = {
+			isa = PBXGroup;
+			children = (
+				6347C4B7270EEECE001DA24E /* MainSceneViewModel.swift */,
+				6347C4B9270EEEE2001DA24E /* MainSceneView.swift */,
+			);
+			path = "Main Scene";
+			sourceTree = "<group>";
+		};
+		6347C4B6270EEE96001DA24E /* Random Beer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Random Beer";
+			sourceTree = "<group>";
+		};
+		6347C4C3270EF210001DA24E /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				6347C4C4270EF221001DA24E /* BeerEndpoint.swift */,
+				6347C4C9270EF414001DA24E /* BeerService.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		6347C4CC270EF4E5001DA24E /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Responses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +428,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6347C4D8270EF8AC001DA24E /* ElavorationMethod.swift in Sources */,
+				6347C4BA270EEEE2001DA24E /* MainSceneView.swift in Sources */,
+				6347C4C2270EF0BB001DA24E /* APISession.swift in Sources */,
+				6347C4B8270EEECE001DA24E /* MainSceneViewModel.swift in Sources */,
+				6347C4D6270EF885001DA24E /* Malt.swift in Sources */,
+				6347C4CE270EF4FF001DA24E /* Beer.swift in Sources */,
+				6347C4CA270EF414001DA24E /* BeerService.swift in Sources */,
+				6347C4D4270EF806001DA24E /* Hop.swift in Sources */,
 				6347C483270EDF3F001DA24E /* ContentView.swift in Sources */,
+				6347C4BE270EF029001DA24E /* RequestBuilder.swift in Sources */,
+				6347C4C8270EF302001DA24E /* Constants.swift in Sources */,
 				6347C481270EDF3F001DA24E /* PunkAppApp.swift in Sources */,
+				6347C4C5270EF221001DA24E /* BeerEndpoint.swift in Sources */,
+				6347C4D2270EF7CA001DA24E /* Ingredients.swift in Sources */,
+				6347C4D0270EF791001DA24E /* BoilVolume.swift in Sources */,
+				6347C4BC270EEEFB001DA24E /* APIService.swift in Sources */,
+				6347C4DC270EF8DE001DA24E /* MashTemp.swift in Sources */,
+				6347C4C0270EF05E001DA24E /* APIError.swift in Sources */,
+				6347C4DA270EF8CE001DA24E /* Fermentation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
