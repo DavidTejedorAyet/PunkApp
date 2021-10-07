@@ -12,7 +12,8 @@ protocol BeerService {
     var apiSession: APIService {get}
     
     func getBeerList() -> AnyPublisher<[Beer], APIError>
-    func getRandomBeer() -> AnyPublisher<Beer, APIError>
+    func getRandomBeer() -> AnyPublisher<[Beer], APIError>
+    func searchBeerBy(food: String) -> AnyPublisher<[Beer], APIError>
 }
 
 extension BeerService {
@@ -22,8 +23,14 @@ extension BeerService {
             .eraseToAnyPublisher()
     }
     
-    func getRandomBeer() -> AnyPublisher<Beer, APIError> {
+    func getRandomBeer() -> AnyPublisher<[Beer], APIError> {
         return apiSession.request(with: BeerEndpoint.randomBeer)
             .eraseToAnyPublisher()
     }
+    
+    func searchBeerBy(food: String) -> AnyPublisher<[Beer], APIError> {
+        return apiSession.request(with: BeerEndpoint.searchBeer(food))
+            .eraseToAnyPublisher()
+    }
+
 }

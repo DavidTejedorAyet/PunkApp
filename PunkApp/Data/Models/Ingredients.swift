@@ -8,9 +8,9 @@
 import Foundation
 
 struct Ingredients: Codable {
-    let malt: [Malt]
-    let hops: [Hop]
-    let yeast: String
+    let malt: [Malt]?
+    let hops: [Hop]?
+    let yeast: String?
 
     enum CodingKeys: String, CodingKey {
         case malt = "malt"

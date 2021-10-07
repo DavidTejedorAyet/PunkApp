@@ -8,8 +8,8 @@
 import Foundation
 
 struct ElavorationMethod: Codable {
-    let mashTemp: [MashTemp]
-    let fermentation: Fermentation
+    let mashTemp: [MashTemp]?
+    let fermentation: Fermentation?
     let twist: String?
 
     enum CodingKeys: String, CodingKey {

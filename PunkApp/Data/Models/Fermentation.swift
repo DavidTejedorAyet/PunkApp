@@ -8,7 +8,7 @@
 import Foundation
 
 struct Fermentation: Codable {
-    let temp: BoilVolume
+    let temp: BoilVolume?
 
     enum CodingKeys: String, CodingKey {
         case temp = "temp"

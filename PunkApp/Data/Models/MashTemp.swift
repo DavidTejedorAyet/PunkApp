@@ -8,7 +8,7 @@
 import Foundation
 
 struct MashTemp: Codable {
-    let temp: BoilVolume
+    let temp: BoilVolume?
     let duration: Int?
 
     enum CodingKeys: String, CodingKey {

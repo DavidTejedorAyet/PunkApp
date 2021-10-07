@@ -8,28 +8,28 @@
 import Foundation
 
 
-struct Beer: Codable {
-    let id: Int
-    let name: String
-    let tagline: String
-    let firstBrewed: String
-    let description: String
-    let imageURL: String
-    let abv: Double
+struct Beer: Codable, Identifiable {
+    let id: Int?
+    let name: String?
+    let tagline: String?
+    let firstBrewed: String?
+    let description: String?
+    let imageURL: String?
+    let abv: Double?
     let ibu: Double?
-    let targetFg: Int
-    let targetOg: Double
+    let targetFg: Int?
+    let targetOg: Double?
     let ebc: Int?
     let srm: Double?
     let ph: Double?
-    let attenuationLevel: Double
-    let volume: BoilVolume
-    let boilVolume: BoilVolume
-    let method: ElavorationMethod
-    let ingredients: Ingredients
-    let foodPairing: [String]
-    let brewersTips: String
-    let contributedBy: ContributedBy
+    let attenuationLevel: Double?
+    let volume: BoilVolume?
+    let boilVolume: BoilVolume?
+    let method: ElavorationMethod?
+    let ingredients: Ingredients?
+    let foodPairing: [String]?
+    let brewersTips: String?
+    let contributedBy: String?
 
     enum CodingKeys: String, CodingKey {
         case id = "id"

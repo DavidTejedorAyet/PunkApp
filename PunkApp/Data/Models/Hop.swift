@@ -8,10 +8,10 @@
 import Foundation
 
 struct Hop: Codable {
-    let name: String
-    let amount: BoilVolume
-    let add: AddTime
-    let attribute: Attribute
+    let name: String?
+    let amount: BoilVolume?
+    let add: String?
+    let attribute: String?
 
     enum CodingKeys: String, CodingKey {
         case name = "name"
@@ -21,16 +21,3 @@ struct Hop: Codable {
     }
 }
 
-enum AddTime: String, Codable {
-    case dryHop = "dry hop"
-    case end = "end"
-    case middle = "middle"
-    case start = "start"
-}
-
-enum Attribute: String, Codable {
-    case aroma = "aroma"
-    case attributeFlavour = "Flavour"
-    case bitter = "bitter"
-    case flavour = "flavour"
-}
