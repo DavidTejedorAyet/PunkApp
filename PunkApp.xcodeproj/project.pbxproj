@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		6347C481270EDF3F001DA24E /* PunkAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347C480270EDF3F001DA24E /* PunkAppApp.swift */; };
-		6347C483270EDF3F001DA24E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347C482270EDF3F001DA24E /* ContentView.swift */; };
 		6347C485270EDF41001DA24E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6347C484270EDF41001DA24E /* Assets.xcassets */; };
 		6347C488270EDF41001DA24E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6347C487270EDF41001DA24E /* Preview Assets.xcassets */; };
 		6347C492270EDF41001DA24E /* PunkAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347C491270EDF41001DA24E /* PunkAppTests.swift */; };
@@ -31,6 +30,15 @@
 		6347C4D8270EF8AC001DA24E /* ElavorationMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347C4D7270EF8AC001DA24E /* ElavorationMethod.swift */; };
 		6347C4DA270EF8CE001DA24E /* Fermentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347C4D9270EF8CE001DA24E /* Fermentation.swift */; };
 		6347C4DC270EF8DE001DA24E /* MashTemp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347C4DB270EF8DE001DA24E /* MashTemp.swift */; };
+		6347C4E1270EFC99001DA24E /* BeerListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347C4E0270EFC99001DA24E /* BeerListViewModel.swift */; };
+		6347C4E3270EFCA3001DA24E /* BeerListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347C4E2270EFCA3001DA24E /* BeerListView.swift */; };
+		6347C4E7270EFFCF001DA24E /* RandomBeerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347C4E6270EFFCF001DA24E /* RandomBeerView.swift */; };
+		6347C4E9270EFFD4001DA24E /* RandomBeerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347C4E8270EFFD4001DA24E /* RandomBeerViewModel.swift */; };
+		6347C4EC270F05F1001DA24E /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347C4EB270F05F1001DA24E /* Router.swift */; };
+		6347C4EE270F0721001DA24E /* BeerDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347C4ED270F0721001DA24E /* BeerDetailViewModel.swift */; };
+		6347C4F2270F0741001DA24E /* BeerDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347C4F1270F0741001DA24E /* BeerDetailView.swift */; };
+		6347C4FC270F3ED5001DA24E /* BeerItemListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347C4FB270F3ED5001DA24E /* BeerItemListView.swift */; };
+		6347C4FE270F4167001DA24E /* BeerItemListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347C4FD270F4167001DA24E /* BeerItemListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,7 +61,6 @@
 /* Begin PBXFileReference section */
 		6347C47D270EDF3F001DA24E /* PunkApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PunkApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6347C480270EDF3F001DA24E /* PunkAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PunkAppApp.swift; sourceTree = "<group>"; };
-		6347C482270EDF3F001DA24E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6347C484270EDF41001DA24E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6347C487270EDF41001DA24E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6347C48D270EDF41001DA24E /* PunkAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PunkAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -78,6 +85,16 @@
 		6347C4D7270EF8AC001DA24E /* ElavorationMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElavorationMethod.swift; sourceTree = "<group>"; };
 		6347C4D9270EF8CE001DA24E /* Fermentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fermentation.swift; sourceTree = "<group>"; };
 		6347C4DB270EF8DE001DA24E /* MashTemp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MashTemp.swift; sourceTree = "<group>"; };
+		6347C4E0270EFC99001DA24E /* BeerListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListViewModel.swift; sourceTree = "<group>"; };
+		6347C4E2270EFCA3001DA24E /* BeerListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListView.swift; sourceTree = "<group>"; };
+		6347C4E6270EFFCF001DA24E /* RandomBeerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomBeerView.swift; sourceTree = "<group>"; };
+		6347C4E8270EFFD4001DA24E /* RandomBeerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomBeerViewModel.swift; sourceTree = "<group>"; };
+		6347C4EB270F05F1001DA24E /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		6347C4ED270F0721001DA24E /* BeerDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerDetailViewModel.swift; sourceTree = "<group>"; };
+		6347C4F1270F0741001DA24E /* BeerDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerDetailView.swift; sourceTree = "<group>"; };
+		6347C4F8270F38B1001DA24E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		6347C4FB270F3ED5001DA24E /* BeerItemListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerItemListView.swift; sourceTree = "<group>"; };
+		6347C4FD270F4167001DA24E /* BeerItemListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerItemListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,8 +145,8 @@
 		6347C47F270EDF3F001DA24E /* PunkApp */ = {
 			isa = PBXGroup;
 			children = (
+				6347C4F8270F38B1001DA24E /* Info.plist */,
 				6347C480270EDF3F001DA24E /* PunkAppApp.swift */,
-				6347C482270EDF3F001DA24E /* ContentView.swift */,
 				6347C4AF270EE2B6001DA24E /* Extensions */,
 				6347C4AE270EE2AD001DA24E /* Utils */,
 				6347C4AD270EE2A6001DA24E /* Data */,
@@ -207,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				6347C4C7270EF302001DA24E /* Constants.swift */,
+				6347C4EA270F05C4001DA24E /* Router */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -221,6 +239,8 @@
 		6347C4B0270EE7FC001DA24E /* Beer List */ = {
 			isa = PBXGroup;
 			children = (
+				6347C4E0270EFC99001DA24E /* BeerListViewModel.swift */,
+				6347C4E2270EFCA3001DA24E /* BeerListView.swift */,
 			);
 			path = "Beer List";
 			sourceTree = "<group>";
@@ -228,6 +248,8 @@
 		6347C4B1270EE81A001DA24E /* Beer Detail */ = {
 			isa = PBXGroup;
 			children = (
+				6347C4ED270F0721001DA24E /* BeerDetailViewModel.swift */,
+				6347C4F1270F0741001DA24E /* BeerDetailView.swift */,
 			);
 			path = "Beer Detail";
 			sourceTree = "<group>";
@@ -235,6 +257,8 @@
 		6347C4B2270EE824001DA24E /* List Cells */ = {
 			isa = PBXGroup;
 			children = (
+				6347C4FB270F3ED5001DA24E /* BeerItemListView.swift */,
+				6347C4FD270F4167001DA24E /* BeerItemListViewModel.swift */,
 			);
 			path = "List Cells";
 			sourceTree = "<group>";
@@ -278,6 +302,8 @@
 		6347C4B6270EEE96001DA24E /* Random Beer */ = {
 			isa = PBXGroup;
 			children = (
+				6347C4E6270EFFCF001DA24E /* RandomBeerView.swift */,
+				6347C4E8270EFFD4001DA24E /* RandomBeerViewModel.swift */,
 			);
 			path = "Random Beer";
 			sourceTree = "<group>";
@@ -296,6 +322,14 @@
 			children = (
 			);
 			path = Responses;
+			sourceTree = "<group>";
+		};
+		6347C4EA270F05C4001DA24E /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				6347C4EB270F05F1001DA24E /* Router.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -429,22 +463,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				6347C4D8270EF8AC001DA24E /* ElavorationMethod.swift in Sources */,
+				6347C4EE270F0721001DA24E /* BeerDetailViewModel.swift in Sources */,
 				6347C4BA270EEEE2001DA24E /* MainSceneView.swift in Sources */,
+				6347C4E7270EFFCF001DA24E /* RandomBeerView.swift in Sources */,
 				6347C4C2270EF0BB001DA24E /* APISession.swift in Sources */,
 				6347C4B8270EEECE001DA24E /* MainSceneViewModel.swift in Sources */,
+				6347C4E1270EFC99001DA24E /* BeerListViewModel.swift in Sources */,
 				6347C4D6270EF885001DA24E /* Malt.swift in Sources */,
 				6347C4CE270EF4FF001DA24E /* Beer.swift in Sources */,
+				6347C4F2270F0741001DA24E /* BeerDetailView.swift in Sources */,
 				6347C4CA270EF414001DA24E /* BeerService.swift in Sources */,
 				6347C4D4270EF806001DA24E /* Hop.swift in Sources */,
-				6347C483270EDF3F001DA24E /* ContentView.swift in Sources */,
 				6347C4BE270EF029001DA24E /* RequestBuilder.swift in Sources */,
+				6347C4FC270F3ED5001DA24E /* BeerItemListView.swift in Sources */,
+				6347C4FE270F4167001DA24E /* BeerItemListViewModel.swift in Sources */,
 				6347C4C8270EF302001DA24E /* Constants.swift in Sources */,
 				6347C481270EDF3F001DA24E /* PunkAppApp.swift in Sources */,
 				6347C4C5270EF221001DA24E /* BeerEndpoint.swift in Sources */,
 				6347C4D2270EF7CA001DA24E /* Ingredients.swift in Sources */,
+				6347C4E9270EFFD4001DA24E /* RandomBeerViewModel.swift in Sources */,
+				6347C4EC270F05F1001DA24E /* Router.swift in Sources */,
 				6347C4D0270EF791001DA24E /* BoilVolume.swift in Sources */,
 				6347C4BC270EEEFB001DA24E /* APIService.swift in Sources */,
 				6347C4DC270EF8DE001DA24E /* MashTemp.swift in Sources */,
+				6347C4E3270EFCA3001DA24E /* BeerListView.swift in Sources */,
 				6347C4C0270EF05E001DA24E /* APIError.swift in Sources */,
 				6347C4DA270EF8CE001DA24E /* Fermentation.swift in Sources */,
 			);
@@ -610,12 +652,14 @@
 				DEVELOPMENT_TEAM = 5Y9TY9M8N6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PunkApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -640,12 +684,14 @@
 				DEVELOPMENT_TEAM = 5Y9TY9M8N6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PunkApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
