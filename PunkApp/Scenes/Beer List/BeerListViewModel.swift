@@ -17,6 +17,7 @@ class BeerListViewModel: ObservableObject, BeerService {
     var apiSession: APIService
     var cancellables = Set<AnyCancellable>()
     var router: RouteToBeerDetail
+    var page = 1
     
     init(apiSession: APIService = APISession(), router: RouteToBeerDetail = Router()) {
         self.apiSession = apiSession
@@ -24,7 +25,7 @@ class BeerListViewModel: ObservableObject, BeerService {
     }
     
     func getBeerList() {
-        let cancellable = self.getBeerList()
+        let cancellable = self.getBeerList(page: page)
             .sink(receiveCompletion: { result in
                 switch result {
                 case .failure(let error):
@@ -34,10 +35,12 @@ class BeerListViewModel: ObservableObject, BeerService {
                 }
                 
             }) { (beerList) in
-                self.beerList = beerList
+                self.beerList.append(contentsOf: beerList)
+                self.page += 1
         }
         cancellables.insert(cancellable)
     }
+    
     
 }
 

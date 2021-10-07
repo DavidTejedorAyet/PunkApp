@@ -8,7 +8,7 @@
 import Foundation
 
 struct BoilVolume: Codable {
-    let value: Double?
+    let value: Float?
     let unit: String?
 
     enum CodingKeys: String, CodingKey {

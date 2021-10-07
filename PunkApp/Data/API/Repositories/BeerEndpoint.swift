@@ -8,18 +8,18 @@
 import Foundation
 
 enum BeerEndpoint {
-    case beerList
+    case beerList(Int)
     case beerDetal
     case randomBeer
-    case searchBeer(String)
+    case searchBeer(String, Int)
 }
 
 extension BeerEndpoint: RequestBuilder {
     
     var urlRequest: URLRequest {
             switch self {
-            case .beerList:
-                guard let url = URL(string: "\(Constants.baseUrl)/beers")
+            case .beerList(let page):
+                guard let url = URL(string: "\(Constants.baseUrl)/beers?page=\(page)")
                     else {preconditionFailure("Invalid URL format")}
                 let request = URLRequest(url: url)
                 return request
@@ -33,8 +33,8 @@ extension BeerEndpoint: RequestBuilder {
                     else {preconditionFailure("Invalid URL format")}
                 let request = URLRequest(url: url)
                 return request
-            case .searchBeer(let food):
-                guard let url = URL(string: "\(Constants.baseUrl)/beers?food=\(food)")
+            case .searchBeer(let food, let page):
+                guard let url = URL(string: "\(Constants.baseUrl)/beers?food=\(food)&page=\(page)")
                     else {preconditionFailure("Invalid URL format")}
                 let request = URLRequest(url: url)
                 return request

@@ -11,15 +11,15 @@ import Combine
 protocol BeerService {
     var apiSession: APIService {get}
     
-    func getBeerList() -> AnyPublisher<[Beer], APIError>
+    func getBeerList(page: Int) -> AnyPublisher<[Beer], APIError>
     func getRandomBeer() -> AnyPublisher<[Beer], APIError>
-    func searchBeerBy(food: String) -> AnyPublisher<[Beer], APIError>
+    func searchBeerBy(food: String, page: Int) -> AnyPublisher<[Beer], APIError>
 }
 
 extension BeerService {
     
-    func getBeerList() -> AnyPublisher<[Beer], APIError> {
-        return apiSession.request(with: BeerEndpoint.beerList)
+    func getBeerList(page: Int = 1) -> AnyPublisher<[Beer], APIError> {
+        return apiSession.request(with: BeerEndpoint.beerList(page))
             .eraseToAnyPublisher()
     }
     
@@ -28,8 +28,8 @@ extension BeerService {
             .eraseToAnyPublisher()
     }
     
-    func searchBeerBy(food: String) -> AnyPublisher<[Beer], APIError> {
-        return apiSession.request(with: BeerEndpoint.searchBeer(food))
+    func searchBeerBy(food: String, page: Int = 1) -> AnyPublisher<[Beer], APIError> {
+        return apiSession.request(with: BeerEndpoint.searchBeer(food, page))
             .eraseToAnyPublisher()
     }
 

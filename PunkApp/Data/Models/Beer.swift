@@ -15,14 +15,14 @@ struct Beer: Codable, Identifiable {
     let firstBrewed: String?
     let description: String?
     let imageURL: String?
-    let abv: Double?
-    let ibu: Double?
+    let abv: Float?
+    let ibu: Float?
     let targetFg: Int?
-    let targetOg: Double?
-    let ebc: Int?
-    let srm: Double?
-    let ph: Double?
-    let attenuationLevel: Double?
+    let targetOg: Float?
+    let ebc: Float?
+    let srm: Float?
+    let ph: Float?
+    let attenuationLevel: Float?
     let volume: BoilVolume?
     let boilVolume: BoilVolume?
     let method: ElavorationMethod?

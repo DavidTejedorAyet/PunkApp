@@ -13,17 +13,31 @@ struct BeerListView: View {
     
     var body: some View {
         NavigationView {
-            List(self.viewModel.beerList) { beer in
-                ZStack {
-                    NavigationLink(destination: viewModel.router.routeToBeerDetail(with: beer)) {
-                        EmptyView() //Para eliminar el icono > de las celdas
+            List {
+                ForEach(viewModel.beerList) { beer in
+                    ZStack {// Ztack Para eliminar el icono ">" de las celdas
+                        NavigationLink(destination: viewModel.router.routeToBeerDetail(with: beer)) {
+                        }
+                        
+                        BeerItemListView(viewModel: BeerItemListViewModel(beer: beer))
                     }
-                    BeerItemListView(viewModel: BeerItemListViewModel(beer: beer))
-
                 }
                 .listRowSeparator(.hidden)
                 .listRowBackground(Color.clear)
-
+                
+                if viewModel.page > 1 {
+                    VStack {
+                        Text("show_more".localized)
+                            .multilineTextAlignment(.center)
+                            .frame(maxWidth: .infinity)
+                        
+                        ProgressView()
+                    }
+                    .onAppear {
+                        viewModel.getBeerList()
+                    }
+                }
+                
             }
             .navigationBarTitle("title".localized)
             .listStyle(PlainListStyle())
