@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  iOSCodeChallenge
+
+  Created by David on 1/10/21.
+  
+*/
+
+"title"="Punk API | Lista de cervezas";
+
+"under_construction_title" = "En construcción";
+"under_construction_message" = "Esta funcionalidad aun esta en desarrollo";
+"hire" = "Contratar para ver más :)";

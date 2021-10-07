@@ -25,9 +25,11 @@ struct BeerListView: View {
                 .listRowBackground(Color.clear)
 
             }
-            .navigationBarTitle("BEER")
+            .navigationBarTitle("title".localized)
             .listStyle(PlainListStyle())
+            
         }
+        
         .onAppear {
             self.viewModel.getBeerList()
         }

@@ -39,6 +39,8 @@
 		6347C4F2270F0741001DA24E /* BeerDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347C4F1270F0741001DA24E /* BeerDetailView.swift */; };
 		6347C4FC270F3ED5001DA24E /* BeerItemListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347C4FB270F3ED5001DA24E /* BeerItemListView.swift */; };
 		6347C4FE270F4167001DA24E /* BeerItemListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347C4FD270F4167001DA24E /* BeerItemListViewModel.swift */; };
+		6347C500270F5339001DA24E /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347C4FF270F5339001DA24E /* String.swift */; };
+		6347C505270F5342001DA24E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6347C502270F5342001DA24E /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +97,9 @@
 		6347C4F8270F38B1001DA24E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		6347C4FB270F3ED5001DA24E /* BeerItemListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerItemListView.swift; sourceTree = "<group>"; };
 		6347C4FD270F4167001DA24E /* BeerItemListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerItemListViewModel.swift; sourceTree = "<group>"; };
+		6347C4FF270F5339001DA24E /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		6347C503270F5342001DA24E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		6347C504270F5342001DA24E /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +152,7 @@
 			children = (
 				6347C4F8270F38B1001DA24E /* Info.plist */,
 				6347C480270EDF3F001DA24E /* PunkAppApp.swift */,
+				6347C501270F5342001DA24E /* Localize */,
 				6347C4AF270EE2B6001DA24E /* Extensions */,
 				6347C4AE270EE2AD001DA24E /* Utils */,
 				6347C4AD270EE2A6001DA24E /* Data */,
@@ -232,6 +238,7 @@
 		6347C4AF270EE2B6001DA24E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				6347C4FF270F5339001DA24E /* String.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -332,6 +339,14 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
+		6347C501270F5342001DA24E /* Localize */ = {
+			isa = PBXGroup;
+			children = (
+				6347C502270F5342001DA24E /* Localizable.strings */,
+			);
+			path = Localize;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -418,6 +433,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = 6347C474270EDF3F001DA24E;
 			productRefGroup = 6347C47E270EDF3F001DA24E /* Products */;
@@ -437,6 +453,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6347C488270EDF41001DA24E /* Preview Assets.xcassets in Resources */,
+				6347C505270F5342001DA24E /* Localizable.strings in Resources */,
 				6347C485270EDF41001DA24E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -480,6 +497,7 @@
 				6347C4C8270EF302001DA24E /* Constants.swift in Sources */,
 				6347C481270EDF3F001DA24E /* PunkAppApp.swift in Sources */,
 				6347C4C5270EF221001DA24E /* BeerEndpoint.swift in Sources */,
+				6347C500270F5339001DA24E /* String.swift in Sources */,
 				6347C4D2270EF7CA001DA24E /* Ingredients.swift in Sources */,
 				6347C4E9270EFFD4001DA24E /* RandomBeerViewModel.swift in Sources */,
 				6347C4EC270F05F1001DA24E /* Router.swift in Sources */,
@@ -523,6 +541,18 @@
 			targetProxy = 6347C498270EDF41001DA24E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6347C502270F5342001DA24E /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6347C503270F5342001DA24E /* en */,
+				6347C504270F5342001DA24E /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		6347C49F270EDF41001DA24E /* Debug */ = {
