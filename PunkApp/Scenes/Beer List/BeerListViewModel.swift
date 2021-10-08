@@ -14,13 +14,13 @@ class BeerListViewModel: ObservableObject, BeerService {
     
     @Published var beerList = [Beer]()
     @Published var searchingText: String = ""
-    
+    @Published var showLoader: Bool = false
+
     let timerManager = TimerManager()
     let apiSession: APIService
     var cancellables = Set<AnyCancellable>()
     let router: RouteToBeerDetail
     var page = 1
-    
     
     init(apiSession: APIService = APISession(), router: RouteToBeerDetail = Router()) {
         self.apiSession = apiSession
@@ -45,8 +45,10 @@ class BeerListViewModel: ObservableObject, BeerService {
     }
     
     private func getBeerList(page: Int, searchingBy food: String) {
+        showLoader = true
         let cancellable = self.getBeerList(searchingBy: searchingText, page: page)
             .sink(receiveCompletion: { result in
+                self.showLoader = false
                 switch result {
                 case .failure(let error):
                     print("Handle error: \(error)")
@@ -57,9 +59,11 @@ class BeerListViewModel: ObservableObject, BeerService {
             }) { (beerList) in
                 self.beerList.append(contentsOf: beerList)
                 
-        }
+            }
         cancellables.insert(cancellable)
     }
+    
+    
 }
 
 

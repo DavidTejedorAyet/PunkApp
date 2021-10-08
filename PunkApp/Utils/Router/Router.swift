@@ -21,29 +21,25 @@ extension Router: RouteToBeerList {
     }
 }
 
-//MARK: Random beer
-
-protocol RouteToRandomBeer {
-    func routeToRandomBeer() -> RandomBeerView
-}
-
-extension Router: RouteToRandomBeer {
-    func routeToRandomBeer() -> RandomBeerView {
-        RandomBeerView()
-    }
-}
 
 //MARK: Bear detail
 
 protocol RouteToBeerDetail {
     func routeToBeerDetail(with beer: Beer) -> BeerDetailView
+    func routeToRandomBeerDetail() -> BeerDetailView
+
 }
 
 extension Router: RouteToBeerDetail {
     func routeToBeerDetail(with beer: Beer) -> BeerDetailView {
         let detailView = BeerDetailView()
         detailView.viewModel.setUpViewModel(with: beer)
-        
+        return detailView
+    }
+    
+    func routeToRandomBeerDetail() -> BeerDetailView {
+        let detailView = BeerDetailView()
+        detailView.viewModel.isRandomBeer = true
         return detailView
     }
 }

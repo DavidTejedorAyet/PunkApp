@@ -32,8 +32,6 @@
 		6347C4DC270EF8DE001DA24E /* MashTemp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347C4DB270EF8DE001DA24E /* MashTemp.swift */; };
 		6347C4E1270EFC99001DA24E /* BeerListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347C4E0270EFC99001DA24E /* BeerListViewModel.swift */; };
 		6347C4E3270EFCA3001DA24E /* BeerListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347C4E2270EFCA3001DA24E /* BeerListView.swift */; };
-		6347C4E7270EFFCF001DA24E /* RandomBeerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347C4E6270EFFCF001DA24E /* RandomBeerView.swift */; };
-		6347C4E9270EFFD4001DA24E /* RandomBeerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347C4E8270EFFD4001DA24E /* RandomBeerViewModel.swift */; };
 		6347C4EC270F05F1001DA24E /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347C4EB270F05F1001DA24E /* Router.swift */; };
 		6347C4EE270F0721001DA24E /* BeerDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347C4ED270F0721001DA24E /* BeerDetailViewModel.swift */; };
 		6347C4F2270F0741001DA24E /* BeerDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347C4F1270F0741001DA24E /* BeerDetailView.swift */; };
@@ -43,6 +41,7 @@
 		6347C505270F5342001DA24E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6347C502270F5342001DA24E /* Localizable.strings */; };
 		6347C50E27104BBE001DA24E /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347C50D27104BBE001DA24E /* TimerManager.swift */; };
 		6347C510271069CB001DA24E /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347C50F271069CB001DA24E /* View.swift */; };
+		6347C5122710E818001DA24E /* NoResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347C5112710E817001DA24E /* NoResultView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,8 +90,6 @@
 		6347C4DB270EF8DE001DA24E /* MashTemp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MashTemp.swift; sourceTree = "<group>"; };
 		6347C4E0270EFC99001DA24E /* BeerListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListViewModel.swift; sourceTree = "<group>"; };
 		6347C4E2270EFCA3001DA24E /* BeerListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListView.swift; sourceTree = "<group>"; };
-		6347C4E6270EFFCF001DA24E /* RandomBeerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomBeerView.swift; sourceTree = "<group>"; };
-		6347C4E8270EFFD4001DA24E /* RandomBeerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomBeerViewModel.swift; sourceTree = "<group>"; };
 		6347C4EB270F05F1001DA24E /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		6347C4ED270F0721001DA24E /* BeerDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerDetailViewModel.swift; sourceTree = "<group>"; };
 		6347C4F1270F0741001DA24E /* BeerDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerDetailView.swift; sourceTree = "<group>"; };
@@ -104,6 +101,7 @@
 		6347C504270F5342001DA24E /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6347C50D27104BBE001DA24E /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
 		6347C50F271069CB001DA24E /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		6347C5112710E817001DA24E /* NoResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoResultView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,7 +204,6 @@
 			children = (
 				6347C4B5270EEE4A001DA24E /* Main Scene */,
 				6347C4B1270EE81A001DA24E /* Beer Detail */,
-				6347C4B6270EEE96001DA24E /* Random Beer */,
 				6347C4B0270EE7FC001DA24E /* Beer List */,
 			);
 			path = Scenes;
@@ -216,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				6347C4B2270EE824001DA24E /* List Cells */,
+				6347C5112710E817001DA24E /* NoResultView.swift */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -310,15 +308,6 @@
 				6347C4B9270EEEE2001DA24E /* MainSceneView.swift */,
 			);
 			path = "Main Scene";
-			sourceTree = "<group>";
-		};
-		6347C4B6270EEE96001DA24E /* Random Beer */ = {
-			isa = PBXGroup;
-			children = (
-				6347C4E6270EFFCF001DA24E /* RandomBeerView.swift */,
-				6347C4E8270EFFD4001DA24E /* RandomBeerViewModel.swift */,
-			);
-			path = "Random Beer";
 			sourceTree = "<group>";
 		};
 		6347C4C3270EF210001DA24E /* Repositories */ = {
@@ -489,13 +478,13 @@
 				6347C4EE270F0721001DA24E /* BeerDetailViewModel.swift in Sources */,
 				6347C510271069CB001DA24E /* View.swift in Sources */,
 				6347C4BA270EEEE2001DA24E /* MainSceneView.swift in Sources */,
-				6347C4E7270EFFCF001DA24E /* RandomBeerView.swift in Sources */,
 				6347C4C2270EF0BB001DA24E /* APISession.swift in Sources */,
 				6347C4B8270EEECE001DA24E /* MainSceneViewModel.swift in Sources */,
 				6347C4E1270EFC99001DA24E /* BeerListViewModel.swift in Sources */,
 				6347C4D6270EF885001DA24E /* Malt.swift in Sources */,
 				6347C4CE270EF4FF001DA24E /* Beer.swift in Sources */,
 				6347C4F2270F0741001DA24E /* BeerDetailView.swift in Sources */,
+				6347C5122710E818001DA24E /* NoResultView.swift in Sources */,
 				6347C4CA270EF414001DA24E /* BeerService.swift in Sources */,
 				6347C4D4270EF806001DA24E /* Hop.swift in Sources */,
 				6347C4BE270EF029001DA24E /* RequestBuilder.swift in Sources */,
@@ -507,7 +496,6 @@
 				6347C4C5270EF221001DA24E /* BeerEndpoint.swift in Sources */,
 				6347C500270F5339001DA24E /* String.swift in Sources */,
 				6347C4D2270EF7CA001DA24E /* Ingredients.swift in Sources */,
-				6347C4E9270EFFD4001DA24E /* RandomBeerViewModel.swift in Sources */,
 				6347C4EC270F05F1001DA24E /* Router.swift in Sources */,
 				6347C4D0270EF791001DA24E /* BoilVolume.swift in Sources */,
 				6347C4BC270EEEFB001DA24E /* APIService.swift in Sources */,

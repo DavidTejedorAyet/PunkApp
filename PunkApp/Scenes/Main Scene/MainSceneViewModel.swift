@@ -11,9 +11,9 @@ import Foundation
 
 class MainSceneViewModel: ObservableObject {
     
-    var router: RouteToBeerList & RouteToRandomBeer
+    var router: RouteToBeerList
     
-    init(router: RouteToBeerList & RouteToRandomBeer = Router()) {
+    init(router: RouteToBeerList = Router()) {
         self.router = router
     }
 }

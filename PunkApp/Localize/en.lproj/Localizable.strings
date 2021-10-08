@@ -8,7 +8,7 @@
 "description" = "Description";
 "since" = "Since";
 "good_with_food" = "It goes well with the following meals:";
-"" = "";
+"no_results" = "There is no results";
 "" = "";
 "" = "";
 "" = "";

@@ -13,57 +13,83 @@ struct BeerListView: View {
     
     var body: some View {
         NavigationView {
-            VStack {
-                HStack {
-                    Image(systemName: "magnifyingglass")
-                    TextField("filter_by_food", text: $viewModel.searchingText)
-                        .foregroundColor(.black)
-                        .onChange(of: viewModel.searchingText) { text in
-                            viewModel.searchBeer(text: text)
-                        }
-                    
+            ZStack (alignment: .bottomTrailing){
+                
+                NavigationLink(destination: viewModel.router.routeToRandomBeerDetail()) {
+                    Image("random_beer")
+                        .resizable()
+                        .frame(width: 50, height: 50)
+                        .padding()
+                        .foregroundColor(Color.black)
+                        .background(Color("background"))
+                        .clipShape(Circle())
+                        .shadow(radius: 5)
                 }
-                .padding()
-                .overlay(
-                    RoundedRectangle(cornerRadius: 10)
-                        .stroke(Color.gray, lineWidth: 1)
-                )
+                .offset(x: -16, y: -24)
+                .zIndex(1)
                 
-                .frame(height: 45)
-                .padding()
                 
-
-                List {
-                    ForEach(viewModel.beerList) { beer in
-                        ZStack {// Ztack Para eliminar el icono ">" de las celdas
-                            NavigationLink(destination: viewModel.router.routeToBeerDetail(with: beer)) {
+                VStack {
+                    HStack {
+                        Image(systemName: "magnifyingglass")
+                        TextField("filter_by_food", text: $viewModel.searchingText)
+                            .foregroundColor(.black)
+                            .onChange(of: viewModel.searchingText) { text in
+                                viewModel.searchBeer(text: text)
                             }
-                            
-                            BeerItemListView(viewModel: BeerItemListViewModel(beer: beer))
-                        }
+                        
                     }
-                    .listRowSeparator(.hidden)
-                    .listRowBackground(Color.clear)
+                    .padding()
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.gray, lineWidth: 1)
+                    )
                     
-                    if viewModel.beerList.count >= Constants.amountOfItemsPerRequest {
-                        VStack {
-                            Text("show_more".localized)
-                                .multilineTextAlignment(.center)
-                                .frame(maxWidth: .infinity)
-                            
+                    .frame(height: 45)
+                    .padding()
+                    
+                    if (viewModel.showLoader) {
+                        ZStack{
                             ProgressView()
-                        }
-                        .onAppear {
-                            viewModel.getMoreBeers()
-                        }
+                        }.zIndex(1)
+                    } else if viewModel.beerList.isEmpty{
+                        
+                        NoResultView()
+                        
                     }
+                    List {
+                        ForEach(viewModel.beerList) { beer in
+                            ZStack {// ZStack Para eliminar el icono ">" de las celdas
+                                NavigationLink(destination: viewModel.router.routeToBeerDetail(with: beer)) {
+                                }
+                                
+                                BeerItemListView(viewModel: BeerItemListViewModel(beer: beer))
+                            }
+                        }
+                        .listRowSeparator(.hidden)
+                        .listRowBackground(Color.clear)
+                        
+                        if viewModel.beerList.count >= Constants.amountOfItemsPerRequest {
+                            VStack {
+                                Text("show_more".localized)
+                                    .multilineTextAlignment(.center)
+                                    .frame(maxWidth: .infinity)
+                                
+                                ProgressView()
+                            }
+                            .onAppear {
+                                viewModel.getMoreBeers()
+                            }
+                        }
+                        
+                    }
+                    .listStyle(PlainListStyle())
+                    
                     
                 }
+                .padding(.top)
                 .navigationBarTitle("title".localized, displayMode: .inline)
-                .listStyle(PlainListStyle())
             }
-            .padding(.top)
-            
         }
         
         
