@@ -41,6 +41,7 @@
 		6347C4FE270F4167001DA24E /* BeerItemListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347C4FD270F4167001DA24E /* BeerItemListViewModel.swift */; };
 		6347C500270F5339001DA24E /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347C4FF270F5339001DA24E /* String.swift */; };
 		6347C505270F5342001DA24E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6347C502270F5342001DA24E /* Localizable.strings */; };
+		6347C50E27104BBE001DA24E /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347C50D27104BBE001DA24E /* TimerManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +101,7 @@
 		6347C4FF270F5339001DA24E /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		6347C503270F5342001DA24E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6347C504270F5342001DA24E /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		6347C50D27104BBE001DA24E /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,6 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				6347C4C7270EF302001DA24E /* Constants.swift */,
+				6347C50D27104BBE001DA24E /* TimerManager.swift */,
 				6347C4EA270F05C4001DA24E /* Router */,
 			);
 			path = Utils;
@@ -492,6 +495,7 @@
 				6347C4CA270EF414001DA24E /* BeerService.swift in Sources */,
 				6347C4D4270EF806001DA24E /* Hop.swift in Sources */,
 				6347C4BE270EF029001DA24E /* RequestBuilder.swift in Sources */,
+				6347C50E27104BBE001DA24E /* TimerManager.swift in Sources */,
 				6347C4FC270F3ED5001DA24E /* BeerItemListView.swift in Sources */,
 				6347C4FE270F4167001DA24E /* BeerItemListViewModel.swift in Sources */,
 				6347C4C8270EF302001DA24E /* Constants.swift in Sources */,

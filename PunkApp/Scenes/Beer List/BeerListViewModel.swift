@@ -13,11 +13,14 @@ import SwiftUI
 class BeerListViewModel: ObservableObject, BeerService {
     
     @Published var beerList = [Beer]()
+    @Published var searchingText: String = ""
     
-    var apiSession: APIService
+    let timerManager = TimerManager()
+    let apiSession: APIService
     var cancellables = Set<AnyCancellable>()
-    var router: RouteToBeerDetail
+    let router: RouteToBeerDetail
     var page = 1
+    
     
     init(apiSession: APIService = APISession(), router: RouteToBeerDetail = Router()) {
         self.apiSession = apiSession
@@ -25,7 +28,25 @@ class BeerListViewModel: ObservableObject, BeerService {
     }
     
     func getBeerList() {
-        let cancellable = self.getBeerList(page: page)
+        getBeerList(page: 1, searchingBy: "")
+    }
+    
+    func searchBeer(text: String) {
+        timerManager.waitForTimer(seconds: 1) {
+            self.beerList.removeAll()
+            self.page = 1
+            self.getBeerList(page: 1, searchingBy: text)
+        }
+    }
+    
+    func getMoreBeers() {
+        self.page += 1
+        getBeerList(page: self.page, searchingBy: searchingText)
+    }
+    
+    private func getBeerList(page: Int, searchingBy food: String) {
+        print("******* ", page, food)
+        let cancellable = self.getBeerList(searchingBy: searchingText, page: page)
             .sink(receiveCompletion: { result in
                 switch result {
                 case .failure(let error):
@@ -36,12 +57,10 @@ class BeerListViewModel: ObservableObject, BeerService {
                 
             }) { (beerList) in
                 self.beerList.append(contentsOf: beerList)
-                self.page += 1
+                
         }
         cancellables.insert(cancellable)
     }
-    
-    
 }
 
 
