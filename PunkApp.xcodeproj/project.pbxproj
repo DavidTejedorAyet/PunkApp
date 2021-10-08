@@ -42,6 +42,7 @@
 		6347C500270F5339001DA24E /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347C4FF270F5339001DA24E /* String.swift */; };
 		6347C505270F5342001DA24E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6347C502270F5342001DA24E /* Localizable.strings */; };
 		6347C50E27104BBE001DA24E /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347C50D27104BBE001DA24E /* TimerManager.swift */; };
+		6347C510271069CB001DA24E /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347C50F271069CB001DA24E /* View.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +103,7 @@
 		6347C503270F5342001DA24E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6347C504270F5342001DA24E /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6347C50D27104BBE001DA24E /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
+		6347C50F271069CB001DA24E /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,6 +244,7 @@
 			isa = PBXGroup;
 			children = (
 				6347C4FF270F5339001DA24E /* String.swift */,
+				6347C50F271069CB001DA24E /* View.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -484,6 +487,7 @@
 			files = (
 				6347C4D8270EF8AC001DA24E /* ElavorationMethod.swift in Sources */,
 				6347C4EE270F0721001DA24E /* BeerDetailViewModel.swift in Sources */,
+				6347C510271069CB001DA24E /* View.swift in Sources */,
 				6347C4BA270EEEE2001DA24E /* MainSceneView.swift in Sources */,
 				6347C4E7270EFFCF001DA24E /* RandomBeerView.swift in Sources */,
 				6347C4C2270EF0BB001DA24E /* APISession.swift in Sources */,

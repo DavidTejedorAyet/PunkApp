@@ -1,14 +1,16 @@
-/* 
-  Localizable.strings
-  iOSCodeChallenge
-
-  Created by David on 1/10/21.
-  
-*/
 
 "title"="Punk API | Beer list";
 "show_more" = "Showing more...";
 "under_construction_title" = "Under construction";
 "under_construction_message" = "This functionallity is on development";
 "hire" = "Hire to see more :)";
-
+"filter_by_food" = "Filter by food";
+"description" = "Description";
+"since" = "Since";
+"good_with_food" = "It goes well with the following meals:";
+"" = "";
+"" = "";
+"" = "";
+"" = "";
+"" = "";
+"" = "";

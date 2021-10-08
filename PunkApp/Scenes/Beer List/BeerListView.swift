@@ -16,7 +16,7 @@ struct BeerListView: View {
             VStack {
                 HStack {
                     Image(systemName: "magnifyingglass")
-                    TextField("Filter by name", text: $viewModel.searchingText)
+                    TextField("filter_by_food", text: $viewModel.searchingText)
                         .foregroundColor(.black)
                         .onChange(of: viewModel.searchingText) { text in
                             viewModel.searchBeer(text: text)

@@ -49,6 +49,11 @@ struct BeerItemListView: View {
                         
                         Spacer()
                         
+                        Text(String(format: "%.1fº", viewModel.beer.abv ?? 0.0))
+                            .font(.system(size: 20))
+                            .fontWeight(.light)
+                            .foregroundColor(Color("AccentColor"))
+                        
                         
                     }
                 }

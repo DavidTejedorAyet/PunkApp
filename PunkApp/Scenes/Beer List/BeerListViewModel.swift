@@ -32,7 +32,7 @@ class BeerListViewModel: ObservableObject, BeerService {
     }
     
     func searchBeer(text: String) {
-        timerManager.waitForTimer(seconds: 1) {
+        timerManager.waitForTimer(seconds: 0.5) {
             self.beerList.removeAll()
             self.page = 1
             self.getBeerList(page: 1, searchingBy: text)
@@ -45,7 +45,6 @@ class BeerListViewModel: ObservableObject, BeerService {
     }
     
     private func getBeerList(page: Int, searchingBy food: String) {
-        print("******* ", page, food)
         let cancellable = self.getBeerList(searchingBy: searchingText, page: page)
             .sink(receiveCompletion: { result in
                 switch result {
