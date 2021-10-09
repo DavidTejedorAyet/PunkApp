@@ -50,17 +50,10 @@ struct BeerDetailView: View {
                                 
                                 Spacer()
                                 
-                                HStack {
-                                    Text("\("since".localized) \(viewModel.beer?.firstBrewed ?? "00/00"),")
-                                        .font(.system(size: 20))
-                                        .fontWeight(.light)
-                                        .foregroundColor(Color("AccentColor"))
-                                    
-                                    Text(String(format: "%.1fº", viewModel.beer?.abv ?? 0.0))
-                                        .font(.system(size: 20))
-                                        .fontWeight(.light)
-                                        .foregroundColor(Color("AccentColor"))
-                                }
+                                Text("\("since".localized) \(viewModel.beer?.firstBrewed ?? "00/00")")
+                                    .font(.system(size: 20))
+                                    .fontWeight(.light)
+                                    .foregroundColor(Color("AccentColor"))
                                 
                                 
                             }.frame(maxWidth: .infinity, alignment: .leading)
@@ -89,22 +82,91 @@ struct BeerDetailView: View {
                         .frame(height: 370)
                         .frame(maxWidth: .infinity)
                         
-                        VStack(alignment: .leading, spacing: 12) {
-                            Text("description".localized)
-                                .font(.title2)
-                                .fontWeight(.medium)
-                                .underline(true, color: Color("AccentColor"))
+                        VStack(alignment: .leading, spacing: 20) {
                             
-                            Text(viewModel.beer?.description ?? "description")
+                            VStack(alignment: .leading, spacing: 8) {
+                                Text("description".localized)
+                                    .font(.title2)
+                                    .fontWeight(.medium)
+                                
+                                Text(viewModel.beer?.description ?? "description")
+                            }
                             
-                            Text("good_with_food".localized)
-                                .font(.title2)
-                                .fontWeight(.medium)
-                                .underline(true, color: Color("AccentColor"))
+                            VStack(alignment: .leading, spacing: 8) {
+                                Text("good_with_food".localized)
+                                    .font(.title2)
+                                    .fontWeight(.medium)
+                                
+                                VStack(alignment: .leading, spacing: 4) {
+                                    ForEach(viewModel.beer?.foodPairing ?? ["food","food"], id: \.self) { food in
+                                        HStack {
+                                            Circle()
+                                                .fill(Color("AccentColor"))
+                                                .frame(width: 8, height: 8)
+                                            Text(food)
+                                        }
+                                        .padding(.leading)
+                                    }
+                                }
+                            }
                             
-                            VStack(alignment: .leading, spacing: 4) {
-                                ForEach(viewModel.beer?.foodPairing ?? ["food","food"], id: \.self) { food in
-                                    Text("- \(food)")
+                            
+                            VStack(alignment: .leading, spacing: 8) {
+                                Text("beer_color".localized)
+                                    .font(.title2)
+                                    .fontWeight(.medium)
+                                
+                                HStack {
+                                    Text("SRM")
+                                        .fontWeight(.light)
+                                        .frame(width: 140, alignment: .leading)
+                                    
+                                    Text(String(format: "%.1f", viewModel.beer?.srm ?? 0.0))
+                                        .fontWeight(.medium)
+
+                                }
+                                
+                                HStack {
+                                    Text("EBC")
+                                        .fontWeight(.light)
+                                        .frame(width: 140, alignment: .leading)
+                                    
+                                    Text(String(format: "%.1f", viewModel.beer?.ebc ?? 0.0))
+                                        .fontWeight(.medium)
+
+                                }
+                            }
+                            
+                            
+                            VStack(alignment: .leading, spacing: 8) {
+                                Text("strength".localized)
+                                    .font(.title2)
+                                    .fontWeight(.medium)
+                                
+                                HStack {
+                                    Text("ABV")
+                                        .fontWeight(.light)
+                                        .frame(width: 140, alignment: .leading)
+                                    
+                                    Text(String(format: "%.1f%%", viewModel.beer?.abv ?? 0.0))
+                                        .fontWeight(.medium)
+
+                                }
+                            }
+                            
+                            VStack(alignment: .leading, spacing: 8) {
+                                Text("bitterness".localized)
+                                    .font(.title2)
+                                    .fontWeight(.medium)
+                                
+                                HStack {
+                                    Text("IBU")
+                                        .fontWeight(.light)
+                                        .frame(width: 140, alignment: .leading)
+                                    
+                                    Text(String(format: "%.1f%%", viewModel.beer?.ibu ?? 0.0))
+                                        .fontWeight(.medium)
+
                                 }
                             }
                             

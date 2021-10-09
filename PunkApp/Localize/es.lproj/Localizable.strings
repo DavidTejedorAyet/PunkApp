@@ -9,8 +9,7 @@
 "since" = "Desde";
 "good_with_food" = "Va bien con las siguientes comidas:";
 "no_results" = "No hay resultados";
-"" = "";
-"" = "";
-"" = "";
-"" = "";
+"beer_color" = "Color de la cerveza";
+"strength" = "Fuerza";
+"bitterness" = "Amargor";
 "" = "";
