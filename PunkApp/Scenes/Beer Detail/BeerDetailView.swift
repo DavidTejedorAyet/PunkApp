@@ -59,7 +59,7 @@ struct BeerDetailView: View {
                             }.frame(maxWidth: .infinity, alignment: .leading)
                             
                             Spacer()
-                            AsyncImage(url: URL(string: viewModel.beer?.imageURL ?? "https://images.punkapi.com/v2/214.png")) { phase in
+                            AsyncImage(url: URL(string: viewModel.beer?.imageURL ?? "")) { phase in
                                 switch phase {
                                 case .empty:
                                     ProgressView()

@@ -42,6 +42,8 @@
 		6347C50E27104BBE001DA24E /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347C50D27104BBE001DA24E /* TimerManager.swift */; };
 		6347C510271069CB001DA24E /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347C50F271069CB001DA24E /* View.swift */; };
 		6347C5122710E818001DA24E /* NoResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347C5112710E817001DA24E /* NoResultView.swift */; };
+		6347C5152711A9D7001DA24E /* FloatingMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347C5142711A9D6001DA24E /* FloatingMenuView.swift */; };
+		6347C5172711AA9E001DA24E /* MenuItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6347C5162711AA9E001DA24E /* MenuItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +104,8 @@
 		6347C50D27104BBE001DA24E /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
 		6347C50F271069CB001DA24E /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		6347C5112710E817001DA24E /* NoResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoResultView.swift; sourceTree = "<group>"; };
+		6347C5142711A9D6001DA24E /* FloatingMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingMenuView.swift; sourceTree = "<group>"; };
+		6347C5162711AA9E001DA24E /* MenuItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +218,7 @@
 			children = (
 				6347C4B2270EE824001DA24E /* List Cells */,
 				6347C5112710E817001DA24E /* NoResultView.swift */,
+				6347C5132711A9BF001DA24E /* Floating Menu */,
 			);
 			path = "Custom Views";
 			sourceTree = "<group>";
@@ -340,6 +345,15 @@
 				6347C502270F5342001DA24E /* Localizable.strings */,
 			);
 			path = Localize;
+			sourceTree = "<group>";
+		};
+		6347C5132711A9BF001DA24E /* Floating Menu */ = {
+			isa = PBXGroup;
+			children = (
+				6347C5142711A9D6001DA24E /* FloatingMenuView.swift */,
+				6347C5162711AA9E001DA24E /* MenuItemView.swift */,
+			);
+			path = "Floating Menu";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -474,7 +488,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6347C5172711AA9E001DA24E /* MenuItemView.swift in Sources */,
 				6347C4D8270EF8AC001DA24E /* ElavorationMethod.swift in Sources */,
+				6347C5152711A9D7001DA24E /* FloatingMenuView.swift in Sources */,
 				6347C4EE270F0721001DA24E /* BeerDetailViewModel.swift in Sources */,
 				6347C510271069CB001DA24E /* View.swift in Sources */,
 				6347C4BA270EEEE2001DA24E /* MainSceneView.swift in Sources */,
@@ -740,7 +756,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5Y9TY9M8N6;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -765,7 +781,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5Y9TY9M8N6;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -14,7 +14,7 @@ struct PunkAppApp: App {
     var body: some Scene {
         WindowGroup {
             MainSceneView()
-                .ignoresSafeArea()
+               
         }
     }
 }

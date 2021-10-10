@@ -1,9 +1,6 @@
 
 "title"="Punk API | Beer list";
 "show_more" = "Showing more...";
-"under_construction_title" = "Under construction";
-"under_construction_message" = "This functionallity is on development";
-"hire" = "Hire to see more :)";
 "filter_by_food" = "Filter by food";
 "description" = "Description";
 "since" = "Since";
@@ -12,5 +9,7 @@
 "beer_color" = "Beer color";
 "strength" = "Strenght";
 "bitterness" = "Bitterness";
+"random" = "Random beer";
+"" = "";
 "" = "";
 "" = "";

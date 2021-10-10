@@ -46,7 +46,7 @@ class BeerListViewModel: ObservableObject, BeerService {
     
     private func getBeerList(page: Int, searchingBy food: String) {
         showLoader = true
-        let cancellable = self.getBeerList(searchingBy: searchingText, page: page)
+        let cancellable = self.getBeerList(searchingBy: food, page: page)
             .sink(receiveCompletion: { result in
                 self.showLoader = false
                 switch result {

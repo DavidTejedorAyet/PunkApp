@@ -11,11 +11,28 @@ struct MainSceneView: View {
     
     @ObservedObject var viewModel = MainSceneViewModel()
     
+    @State var goToRandom = false
+    @State var showAlert = false
+    
     var body: some View {
         
-        ZStack {
-            viewModel.router.routeToBeerList()
+        NavigationView {
+            ZStack {
+                
+                NavigationLink(destination: viewModel.router.routeToRandomBeerDetail(), isActive: $goToRandom) { EmptyView() }
+                
+                viewModel.router.routeToBeerList()
+                    
+                FloatingMenuView(actionButton1: {
+                    goToRandom.toggle()
+                }, actionButton2: {
+                    
+                })
+                    
+            }
         }
+        
+        
         
     }
 }
