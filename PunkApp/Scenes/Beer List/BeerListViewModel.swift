@@ -15,7 +15,7 @@ class BeerListViewModel: ObservableObject, BeerService {
     @Published var beerList = [Beer]()
     @Published var searchingText: String = ""
     @Published var showLoader: Bool = false
-
+    
     let timerManager = TimerManager()
     let apiSession: APIService
     var cancellables = Set<AnyCancellable>()
@@ -28,23 +28,30 @@ class BeerListViewModel: ObservableObject, BeerService {
     }
     
     func getBeerList() {
-        getBeerList(page: 1, searchingBy: "")
+        getBeerList(page: 1, searchingBy: "") { beerList in
+            self.beerList.append(contentsOf: beerList)
+        }
     }
     
     func searchBeer(text: String) {
         timerManager.waitForTimer(seconds: 0.5) {
             self.beerList.removeAll()
             self.page = 1
-            self.getBeerList(page: 1, searchingBy: text)
+            
+            self.getBeerList(page: 1, searchingBy: text) { beerList in
+                self.beerList.append(contentsOf: beerList)
+            }
         }
     }
     
     func getMoreBeers() {
         self.page += 1
-        getBeerList(page: self.page, searchingBy: searchingText)
+        getBeerList(page: self.page, searchingBy: searchingText) { beerList in
+            self.beerList.append(contentsOf: beerList)
+        }
     }
     
-    private func getBeerList(page: Int, searchingBy food: String) {
+    func getBeerList(page: Int, searchingBy food: String, completion: @escaping ([Beer]) -> Void) {
         showLoader = true
         let cancellable = self.getBeerList(searchingBy: food, page: page)
             .sink(receiveCompletion: { result in
@@ -56,9 +63,8 @@ class BeerListViewModel: ObservableObject, BeerService {
                     break
                 }
                 
-            }) { (beerList) in
-                self.beerList.append(contentsOf: beerList)
-                
+            }) { beerList in
+                completion(beerList)
             }
         cancellables.insert(cancellable)
     }

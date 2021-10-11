@@ -66,8 +66,6 @@ struct BeerItemListView: View {
             .shadow(color: .gray, radius: 10, x: 3, y: 3)
         }
         .padding(.vertical,8)
-        
-        
     }
 }
 

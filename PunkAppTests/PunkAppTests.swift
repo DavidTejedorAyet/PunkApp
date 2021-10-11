@@ -18,16 +18,42 @@ class PunkAppTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func testGetAllBeers() throws {
+        
+        let promise = expectation(description: "Request succeeded")
+        let viewModel = BeerListViewModel()
+        
+        viewModel.getBeerList(page: 1, searchingBy: "") { beerList in
+            XCTAssertNotNil(beerList)
+            promise.fulfill()
         }
+        waitForExpectations(timeout: 5, handler: nil)
+    }
+    
+    func testSearchBeers() throws {
+        
+        let promise = expectation(description: "Request succeeded")
+        let viewModel = BeerListViewModel()
+        
+        viewModel.getBeerList(page: 1, searchingBy: "Meat") { beerList in
+            XCTAssert(beerList.count >= 2)
+            promise.fulfill()
+        }
+        waitForExpectations(timeout: 5, handler: nil)
+        
+    }
+    
+    func testSearchBeersEmpty() throws {
+        
+        let promise = expectation(description: "Request succeeded")
+        let viewModel = BeerListViewModel()
+        
+        viewModel.getBeerList(page: 1, searchingBy: "adnfaonfwofnawd") { beerList in
+            XCTAssert(beerList.isEmpty)
+            promise.fulfill()
+        }
+        waitForExpectations(timeout: 5, handler: nil)
+
     }
 
 }

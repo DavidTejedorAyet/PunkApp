@@ -14,14 +14,16 @@ struct FloatingMenuView: View {
     
     @State var actionButton1: (() -> Void)?
     @State var actionButton2: (() -> Void)?
-
+    
     
     var body: some View {
         ZStack(alignment: .bottomTrailing) {
             
             if showMenuItem2 {
                 Color("background").opacity(0.85)
+                    .ignoresSafeArea()
 
+                
             } else {
                 Color.clear
             }
@@ -32,18 +34,24 @@ struct FloatingMenuView: View {
                 
                 if showMenuItem1 {
                     MenuItemView(image: Image("random_beer"), title: "random".localized)
+                        .accessibilityIdentifier("FloatingMenuBtn1")
                         .onTapGesture {
-                        actionButton1?()
-                        showMenu()
-                    }
+                            actionButton1?()
+                            showMenu()
+                        }
                 }
+                    
+                
                 
                 if showMenuItem2 {
-                    MenuItemView(image: Image(systemName: "heart.fill"), title: "Test Button").onTapGesture {
+                    MenuItemView(image: Image(systemName: "heart.fill"), title: "Test Button")
+                        .accessibilityIdentifier("FloatingMenuBtn2")
+                        .onTapGesture {
                         actionButton2?()
                         showMenu()
                     }
                 }
+                
                 
                 Button {
                     showMenu()
@@ -51,7 +59,7 @@ struct FloatingMenuView: View {
                     ZStack {
                         Circle()
                             .foregroundColor(Color("AccentColor"))
-                        .frame(width: 60, height: 60)
+                            .frame(width: 60, height: 60)
                         
                         Image(systemName: "ellipsis")
                             .resizable()
@@ -65,13 +73,14 @@ struct FloatingMenuView: View {
                     
                     
                 }
+                .accessibilityIdentifier("FloatingMenu")
                 
                 
             }
-            .padding(24)
+            .padding()
         }
-        .ignoresSafeArea()
         .frame(maxWidth: .infinity, maxHeight: .infinity)
+        
         
         
     }
@@ -91,6 +100,5 @@ struct FloatingMenuView: View {
 struct FloatingMenuView_Previews: PreviewProvider {
     static var previews: some View {
         MainSceneView()
-        FloatingMenuView()
     }
 }
